@@ -1,0 +1,130 @@
+components:
+- components:
+  - components:
+    - event_bindings: {click: button_1_click}
+      layout_properties: {grid_position: 'EZSCLX,SXUNUY'}
+      name: button_1
+      properties: {foreground: 'theme:White', text: Next card}
+      type: Button
+    - event_bindings: {click: button_5_click}
+      layout_properties: {grid_position: 'ZDIBFH,SWRJRW'}
+      name: button_5
+      properties: {foreground: 'theme:White', text: Next card, visible: false}
+      type: Button
+    name: column_panel_5
+    properties: {}
+    type: ColumnPanel
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- components:
+  - event_bindings: {click: primary_color_1_click}
+    layout_properties: {grid_position: 'ACYYZW,HKNJBY'}
+    name: primary_color_1
+    properties: {role: primary-color, text: Flip Card}
+    type: Button
+  - components:
+    - layout_properties: {grid_position: 'DYDYGK,KFYAMM'}
+      name: headline_1
+      properties: {role: headline, text: Front of card}
+      type: Label
+    - layout_properties: {grid_position: 'QXDHDP,HOVMDA'}
+      name: image_1
+      properties: {visible: true}
+      type: Image
+    - layout_properties: {grid_position: 'VWETRJ,JTFIVY', row_background: 'theme:Primary 700'}
+      name: Front_data
+      properties: {foreground: 'theme:White', visible: true}
+      type: Label
+    layout_properties: {grid_position: 'UCHDMM,EICCBX'}
+    name: column_panel_3
+    properties: {}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'RIFFMX,LVELTH'}
+      name: headline_2
+      properties: {role: headline, text: Back of card}
+      type: Label
+    - layout_properties: {grid_position: 'MZPTQJ,CAPDXK', row_background: 'theme:Primary 700'}
+      name: back_data
+      properties: {foreground: 'theme:White'}
+      type: Label
+    - event_bindings: {change: check_box_1_change}
+      layout_properties: {grid_position: 'SSYEJK,MBUNRP'}
+      name: check_box_1
+      properties: {align: center, text: 'Did you get the answer correct?'}
+      type: CheckBox
+    - layout_properties: {grid_position: 'JBWXPX,YYAHES'}
+      name: label_1
+      properties: {text: '               Set your confidence from 1 to 5 '}
+      type: Label
+    - event_bindings: {change: slider_1_change}
+      layout_properties: {grid_position: 'JBWXPX,NHFGCF EXNNEH,YORBID'}
+      name: slider_1
+      properties: {}
+      type: form:dep_wndcoxp0o8so9w:Slider
+    - event_bindings: {click: primary_color_2_click}
+      layout_properties: {grid_position: 'JBWXPX,NHFGCF XRGRRF,WGPHGC'}
+      name: primary_color_2
+      properties: {icon: 'fa:save', role: primary-color, text: 'Save choice''s '}
+      type: Button
+    - layout_properties: {grid_position: 'JBWXPX,UBNZMZ'}
+      name: label_2
+      properties: {}
+      type: Label
+    layout_properties: {grid_position: 'PRARKH,JPINWC'}
+    name: column_panel_2
+    properties: {visible: false}
+    type: ColumnPanel
+  - components:
+    - layout_properties: {grid_position: 'HJNSKT,DPDNEW'}
+      name: headline_3
+      properties: {align: center, role: headline, text: End of flashcard review}
+      type: Label
+    - event_bindings: {click: button_4_click}
+      layout_properties: {grid_position: 'KDHALR,FVMTMS'}
+      name: button_4
+      properties: {background: '#d51a1a', foreground: 'theme:White', text: 'Go to improvement set '}
+      type: Button
+    - event_bindings: {click: button_3_click}
+      layout_properties: {grid_position: 'KDHALR,ZBXCVT'}
+      name: button_3
+      properties: {background: 'theme:Primary 700', foreground: 'theme:White', text: Go back to hub}
+      type: Button
+    - event_bindings: {click: button_7_click}
+      layout_properties: {full_width_row: false, grid_position: 'VTRRDN,BANGHD'}
+      name: button_7
+      properties: {background: 'theme:Primary 700', foreground: 'theme:White', text: Go back to hub, visible: false}
+      type: Button
+    layout_properties: {grid_position: 'HGXADQ,CRBYKF'}
+    name: column_panel_4
+    properties: {visible: false}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+- components:
+  - event_bindings: {click: button_2_click}
+    layout_properties: {grid_position: 'QISNYO,NVAPYB'}
+    name: button_2
+    properties: {background: 'theme:Primary 500', foreground: 'theme:White', text: previous card}
+    type: Button
+  - event_bindings: {click: button_6_click}
+    layout_properties: {grid_position: 'BRLBOC,HETMJE'}
+    name: button_6
+    properties: {foreground: 'theme:White', text: Previous Card, visible: false}
+    type: Button
+  layout_properties: {slot: top-left-btn}
+  name: column_panel_6
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: title}
+  name: column_panel_7
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

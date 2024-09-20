@@ -1,0 +1,82 @@
+components:
+- components:
+  - layout_properties: {grid_position: 'IRSSUR,ARAZYE'}
+    name: headline_2
+    properties: {role: headline, text: Remove Flashcard}
+    type: Label
+  - event_bindings: {change: drop_down_1_change}
+    layout_properties: {grid_position: 'UEPBOS,UYMLLN'}
+    name: drop_down_1
+    properties:
+      items: ['Which flashcard do you want to remove?']
+    type: DropDown
+  - layout_properties: {grid_position: 'MQBOYS,TNPMPU'}
+    name: label_1
+    properties: {text: 'Front of card:'}
+    type: Label
+  - layout_properties: {grid_position: 'HQMDDJ,PRPXWM'}
+    name: label_2
+    properties: {text: 'Back of card:'}
+    type: Label
+  - event_bindings: {click: button_2_click}
+    layout_properties: {grid_position: 'UGLORB,MLMQQD'}
+    name: button_2
+    properties: {background: '#c81414', foreground: 'theme:White', icon: 'fa:remove', text: Remove Card}
+    type: Button
+  - layout_properties: {full_width_row: false, grid_position: 'ISEQQP,VKVHIZ', row_background: 'theme:Primary 700'}
+    name: spacer_1
+    properties: {height: 16}
+    type: Spacer
+  - layout_properties: {grid_position: 'WFPVRW,BSBDHU'}
+    name: headline_3
+    properties: {role: headline, text: Add Flashcard}
+    type: Label
+  - layout_properties: {grid_position: 'WZHSDX,IQXJLU'}
+    name: label_3
+    properties: {text: 'Front of card:'}
+    type: Label
+  - event_bindings: {pressed_enter: term_box_pressed_enter}
+    layout_properties: {grid_position: 'JRGTHA,CLLTUW'}
+    name: term_box
+    properties: {}
+    type: TextBox
+  - layout_properties: {grid_position: 'JUSRUZ,EDUSYV'}
+    name: file_loader_1
+    properties: {}
+    type: FileLoader
+  - layout_properties: {grid_position: 'LRRPKH,SPVSHU'}
+    name: label_4
+    properties: {text: 'back of card:'}
+    type: Label
+  - event_bindings: {pressed_enter: definition_box_pressed_enter}
+    layout_properties: {grid_position: 'CXRYOL,AWQTZP'}
+    name: definition_box
+    properties: {}
+    type: TextBox
+  - event_bindings: {click: button_1_click}
+    layout_properties: {grid_position: 'VTHVHH,MZYCGV'}
+    name: button_1
+    properties: {align: center, background: '#27a40e', foreground: 'theme:White', text: add card, visible: false}
+    type: Button
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- components:
+  - event_bindings: {click: primary_color_1_click}
+    layout_properties: {}
+    name: primary_color_1
+    properties: {role: primary-color, text: Go back to hub}
+    type: Button
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: headline_1
+  properties: {role: headline, text: Flashcard editor}
+  type: Label
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

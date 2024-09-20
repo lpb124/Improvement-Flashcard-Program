@@ -1,0 +1,106 @@
+components:
+- components: []
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_2
+  properties: {}
+  type: Label
+- event_bindings: {click: primary_color_1_click}
+  layout_properties: {slot: top-left-btn}
+  name: primary_color_1
+  properties: {icon: 'fa:backward', role: primary-color, text: Go back to hub}
+  type: Button
+- components:
+  - layout_properties: {grid_position: 'UHTFTN,EEECCW'}
+    name: label_3
+    properties: {text: Review a set first before checking scores, visible: false}
+    type: Label
+  - components:
+    - layout_properties: {grid_position: 'XHOVLA,ZTMNUZ'}
+      name: headline_2
+      properties: {role: headline, text: Scores}
+      type: Label
+    - layout_properties: {grid_position: 'MCUQJX,EFGUHC'}
+      name: spacer_1
+      properties: {height: '1'}
+      type: Spacer
+    - layout_properties: {grid_position: 'VLDEBO,EJOUAX'}
+      name: headline_1
+      properties: {font_size: 20, role: headline, text: 'All past sorted scores from best to worst:'}
+      type: Label
+    - layout_properties: {grid_position: 'UUZUSV,EGZCMZ'}
+      name: sorted_label
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'OFDWRO,EFOQFS'}
+      name: label_5
+      properties: {font_size: 20, text: 'Average percent of flashcards correct:'}
+      type: Label
+    - layout_properties: {grid_position: 'OWJCEN,SQQMQB'}
+      name: label_6
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'ABYWWZ,ZCMWUL'}
+      name: headline_3
+      properties: {font_size: 20, role: headline, text: scores over time}
+      type: Label
+    - event_bindings: {click: plot_1_click}
+      layout_properties: {grid_position: 'WKZQER,CEUTKL'}
+      name: plot_1
+      properties: {}
+      type: Plot
+    - layout_properties: {grid_position: 'LCRWDM,UQIAQX', row_background: 'theme:Primary 700'}
+      name: spacer_2
+      properties: {height: '1'}
+      type: Spacer
+    - layout_properties: {grid_position: 'YSUAVP,ZBZBGE'}
+      name: headline_4
+      properties: {role: headline, text: Confidence ratings}
+      type: Label
+    - layout_properties: {grid_position: 'HAQICU,PSUMMT'}
+      name: headline_5
+      properties: {font_size: 20, role: headline, text: 'Average confidence rating:'}
+      type: Label
+    - layout_properties: {grid_position: 'WSZDWJ,HIAPXI'}
+      name: confidence_label
+      properties: {}
+      type: Label
+    - layout_properties: {grid_position: 'BHPWXM,VWCZLA'}
+      name: headline_6
+      properties: {font_size: 20, role: headline, text: Confidence ratings over time}
+      type: Label
+    - layout_properties: {grid_position: 'FFUFQH,JOBTLE'}
+      name: plot_2
+      properties: {}
+      type: Plot
+    - layout_properties: {grid_position: 'TIICQC,MIGJOK', row_background: 'theme:Primary 700'}
+      name: spacer_3
+      properties: {height: '1'}
+      type: Spacer
+    - layout_properties: {grid_position: 'BXHVKZ,KFSELW'}
+      name: headline_7
+      properties: {role: headline, text: Streaks}
+      type: Label
+    - layout_properties: {grid_position: 'EGRPNK,KMFIDG'}
+      name: label_1
+      properties: {font_size: 20, text: Longest streak in all sessions}
+      type: Label
+    - layout_properties: {grid_position: 'GCRFXV,TGPCMC'}
+      name: label_4
+      properties: {}
+      type: Label
+    layout_properties: {grid_position: 'KWWVSI,RUKMVA'}
+    name: content_panel
+    properties: {}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

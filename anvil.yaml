@@ -1,0 +1,179 @@
+allow_embedding: false
+correct_dependency_ids: {dep_wndcoxp0o8so9w: AOCLPCVZLVOISVWB}
+db_schema:
+  definition:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Content
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: ID
+      type: number
+    server: full
+    title: definition
+  flashcard_:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Front
+      target: term
+      type: link_single
+    - admin_ui: {order: 1, width: 200}
+      name: Back
+      target: definition
+      type: link_single
+    - admin_ui: {order: 2, width: 200}
+      name: ID
+      type: number
+    server: full
+    title: 'flashcard '
+  id_manager_:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Key
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: Term
+      type: number
+    - admin_ui: {order: 2, width: 200}
+      name: Definition
+      type: number
+    - admin_ui: {order: 3, width: 200}
+      name: Flashcard
+      type: number
+    - admin_ui: {order: 4, width: 200}
+      name: Set
+      type: number
+    - admin_ui: {order: 5, width: 200}
+      name: Topic
+      type: number
+    - admin_ui: {order: 6, width: 200}
+      name: User
+      type: number
+    - admin_ui: {order: 7, width: 200}
+      name: Statistics
+      type: number
+    server: full
+    title: 'id_manager '
+  set:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Name
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: Flashcards
+      target: flashcard_
+      type: link_multiple
+    - admin_ui: {order: 2, width: 200}
+      name: ID
+      type: number
+    - admin_ui: {order: 3, width: 200}
+      name: Statistics
+      target: statistics
+      type: link_single
+    server: full
+    title: set
+  statistics:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Name
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: ID
+      type: number
+    - admin_ui: {order: 2, width: 200}
+      name: Total_sessions
+      type: number
+    - admin_ui: {order: 3, width: 200}
+      name: Total_correct
+      type: number
+    - admin_ui: {order: 4, width: 200}
+      name: Average_confidence
+      type: number
+    - admin_ui: {order: 5, width: 200}
+      name: Average_score
+      type: number
+    - admin_ui: {order: 6, width: 200}
+      name: Lowest_score
+      type: number
+    - admin_ui: {order: 7, width: 200}
+      name: Highest_score
+      type: number
+    - admin_ui: {order: 8, width: 200}
+      name: Current_score
+      type: number
+    - admin_ui: {order: 9, width: 200}
+      name: Latest_longest_streak
+      type: number
+    - admin_ui: {order: 10, width: 200}
+      name: Longest_streak
+      type: number
+    - admin_ui: {order: 11, width: 200}
+      name: Score_history
+      type: simpleObject
+    - admin_ui: {order: 12, width: 200}
+      name: Confidence_history
+      type: simpleObject
+    - admin_ui: {order: 13, width: 200}
+      name: Total_incorrect
+      type: number
+    server: full
+    title: statistics
+  term:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Image
+      type: media
+    - admin_ui: {order: -1, width: 200}
+      name: Content
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: ID
+      type: number
+    server: full
+    title: term
+  topic:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Sets
+      target: set
+      type: link_multiple
+    - admin_ui: {order: 1, width: 200}
+      name: Name
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: ID
+      type: number
+    server: full
+    title: topic
+  user:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Topics
+      target: topic
+      type: link_multiple
+    - admin_ui: {order: 1, width: 200}
+      name: ID
+      type: number
+    server: full
+    title: user
+dependencies:
+- dep_id: dep_wndcoxp0o8so9w
+  resolution_hints: {app_id: AOCLPCVZLVOISVWB, name: Clone of Slider Component (2), package_name: SliderDemo}
+  version: {dev: false}
+name: Clone of Jordan Seliga Computer Science Internal Assessment
+package_name: Computer_Science_IA_real
+runtime_options: {client_version: '3', server_spec: null, server_version: python3-sandbox, version: 2}
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+startup: {module: homepage, type: form}
+startup_form: null
